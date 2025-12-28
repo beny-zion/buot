@@ -132,7 +132,7 @@ export default function SignatureForm() {
             className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-sky-500 focus:ring-2 focus:ring-sky-200 outline-none text-lg transition-all"
           >
             <option value="">בחרו...</option>
-            <option value="parent">הורה לילד/ה עם צרכים מיוחדים</option>
+            <option value="parent">הורה לילד/ה מטופל/ת</option>
             <option value="therapist">מטפל/ת</option>
             <option value="supporter">תומך/ת</option>
           </select>
