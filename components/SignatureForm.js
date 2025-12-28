@@ -133,6 +133,7 @@ export default function SignatureForm() {
           >
             <option value="">בחרו...</option>
             <option value="parent">הורה לילד/ה מטופל/ת</option>
+            <option value="patient">מטופל/ת</option>
             <option value="therapist">מטפל/ת</option>
             <option value="supporter">תומך/ת</option>
           </select>
