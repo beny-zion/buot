@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto">
         {/* ABT Logo and Organization Name */}
         <div className="flex flex-col items-center mb-8">
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 mb-4">
+          <div className="bg-white/20 backdrop-blur-md rounded-2xl p-6 mb-4 border-4 border-white/40 shadow-2xl">
             <Image
               src="/bti_logo_text.svg"
               alt="איגוד הבריכות הטיפוליות"

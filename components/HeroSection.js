@@ -1,6 +1,7 @@
 'use client';
 
 import { AlertTriangle } from 'lucide-react';
+import Image from 'next/image';
 
 export default function HeroSection() {
   return (
@@ -19,6 +20,19 @@ export default function HeroSection() {
       >
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
+      </div>
+
+      {/* BTI Logo - Top Left - Desktop Only */}
+      <div className="absolute top-8 left-8 z-20 hidden md:block">
+        <div className="bg-white/90 backdrop-blur-md rounded-xl p-3 shadow-xl">
+          <Image
+            src="/bti_logo_text.svg"
+            alt="איגוד הבריכות הטיפוליות"
+            width={120}
+            height={50}
+            className="w-32"
+          />
+        </div>
       </div>
 
       {/* Content overlay */}
