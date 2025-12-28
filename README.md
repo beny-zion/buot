@@ -1,36 +1,239 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# מצילים את הבועות - אתר עצומה 🌊
 
-## Getting Started
+אתר עצומה ממוקד המטרה למניעת ביטול טיפולי הידרותרפיה והרכיבה הטיפולית מהביטוחים המשלימים.
 
-First, run the development server:
+## 📋 תוכן עניינים
+
+- [אודות הפרויקט](#אודות-הפרויקט)
+- [טכנולוגיות](#טכנולוגיות)
+- [התקנה](#התקנה)
+- [הגדרת Supabase](#הגדרת-supabase)
+- [הרצת הפרויקט](#הרצת-הפרויקט)
+- [פריסה (Deployment)](#פריסה-deployment)
+- [מבנה הפרויקט](#מבנה-הפרויקט)
+
+---
+
+## 🎯 אודות הפרויקט
+
+**המטרה:** הקמת דף נחיתה אקטיביסטי למניעת אישור טיוטת משרד הבריאות, אשר מאיימת לגרוע את טיפולי ההידרותרפיה והרכיבה הטיפולית מהביטוחים המשלימים.
+
+**הנרטיב:** "המים הם החמצן שלהם" - המעבר מהרוגע של המים לחרדה של הקיצוץ הכלכלי.
+
+**קהל היעד:**
+- הורים לילדים עם צרכים מיוחדים
+- תושבי פריפריה שנפגעים מהמהלך
+- הקהל הרחב שמזדהה עם פגיעה בחלשים בזמן מלחמה
+
+---
+
+## 🛠️ טכנולוגיות
+
+הפרויקט בנוי עם:
+
+- **Next.js 14** (App Router) - Framework לבניית React
+- **JavaScript** - שפת תכנות (ללא TypeScript)
+- **Tailwind CSS** - עיצוב מהיר ורספונסיבי
+- **Supabase** - Backend as a Service (PostgreSQL + Real-time)
+- **Lucide React** - אייקונים מודרניים
+- **Vercel** - פלטפורמת Hosting (מומלץ)
+
+---
+
+## 📦 התקנה
+
+### דרישות מקדימות
+
+- Node.js 18.17 ומעלה
+- npm (מגיע עם Node.js)
+- חשבון Supabase (חינמי)
+
+### שלבי ההתקנה
+
+1. **שכפול הפרויקט:**
+   ```bash
+   cd buot-petition
+   ```
+
+2. **התקנת החבילות:**
+   ```bash
+   npm install
+   ```
+
+3. **יצירת קובץ משתני סביבה:**
+   ```bash
+   cp .env.local.example .env.local
+   ```
+
+---
+
+## 🗄️ הגדרת Supabase
+
+**חשוב:** האתר לא יעבוד ללא הגדרת Supabase!
+
+עקבו אחר המדריך המפורט בקובץ:
+📄 **[SUPABASE_SETUP.md](./SUPABASE_SETUP.md)**
+
+**תקציר מהיר:**
+
+1. צרו חשבון ב-[supabase.com](https://supabase.com)
+2. צרו פרויקט חדש
+3. הריצו את הסקריפט SQL ליצירת טבלת `signatures`
+4. העתיקו את ה-URL ו-API Key לקובץ `.env.local`
+
+---
+
+## 🚀 הרצת הפרויקט
+
+### מצב פיתוח (Development)
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+האתר יהיה זמין ב-[http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### בניית הפרויקט (Production Build)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🌐 פריסה (Deployment)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Vercel (מומלץ)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. העלו את הפרויקט ל-GitHub
+2. היכנסו ל-[vercel.com](https://vercel.com)
+3. לחצו "Import Project" ובחרו את הריפו
+4. הוסיפו את משתני הסביבה:
+   - `NEXT_PUBLIC_SUPABASE_URL`
+   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+5. לחצו Deploy
 
-## Deploy on Vercel
+**הפרויקט יהיה אונליין תוך 1-2 דקות!**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### אפשרויות נוספות
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Netlify:** תומך ב-Next.js עם הגדרה דומה
+- **Railway:** חלופה טובה עם תמיכה ב-Node.js
+- **DigitalOcean App Platform:** אופציה self-hosted
+
+---
+
+## 📁 מבנה הפרויקט
+
+```
+buot-petition/
+├── app/
+│   ├── layout.js          # Layout ראשי עם פונט עברי
+│   ├── page.js            # דף הבית (כל האתר)
+│   └── globals.css        # סגנונות גלובליים
+├── components/
+│   ├── HeroSection.js     # Hero עם אנימציית גלי מים
+│   ├── CountdownTimer.js  # טיימר דמיוני ליצירת דחיפות
+│   ├── ContentSection.js  # נרטיב, ציטוטים וכרטיסי מידע
+│   └── SignatureForm.js   # טופס החתמה + מונה חי + מסך תודה
+├── lib/
+│   ├── supabase.js        # חיבור ל-Supabase
+│   └── actions.js         # Server Actions (הוספת חתימות)
+├── public/                # קבצים סטטיים (תמונות, לוגו)
+├── .env.local.example     # דוגמה למשתני סביבה
+├── SUPABASE_SETUP.md      # מדריך הגדרת Supabase
+└── README.md              # אתה כאן! 👋
+```
+
+---
+
+## 🎨 עיצוב ו-UI/UX
+
+### פלטת צבעים
+
+- **כחול עמוק (Primary):** `#0ea5e9` - `#0c4a6e` (מים, טיפול)
+- **אדום חירום (Action/Alert):** `#ef4444` (כפתורי החתמה, אזהרות)
+- **לבן/אפור נקי:** רקעים וטקסטים
+
+### פונטים
+
+- **Heebo** - פונט עברי מודרני וקריא
+- משקולות: 300, 400, 500, 700, 800, 900
+
+### אלמנטים ויזואליים
+
+- אנימציית גלי מים ב-Hero
+- טיימר דמיוני מתאפס כל יום
+- מונה חתימות עדכני בזמן אמת
+- שיתוף מיידי לווצאפ לאחר החתמה
+
+---
+
+## 📊 פיצ'רים עיקריים
+
+✅ **Hero Section** - הודעת דחיפות עם אנימציה
+✅ **טיימר ספירה לאחור** - מתאפס יומית ליצירת דחיפות
+✅ **כרטיסי מידע** - מי ייפגע, פריפריה, מלחמה
+✅ **ציטוט מומחה** - שמוליק בן יעקב (יו"ר האגודה לזכויות החולה)
+✅ **טופס החתמה** - שדות מינימליים, ללא אימות מייל
+✅ **מונה חתימות חי** - עדכון כל 5 שניות
+✅ **מסך תודה + שיתוף לווצאפ** - וויראליות מובנית
+✅ **אופטימיזציה לנייד** - Mobile First
+✅ **SEO מתקדם** - Open Graph לשיתוף יפה בווצאפ/פייסבוק
+
+---
+
+## 🔒 אבטחה
+
+- **Row Level Security (RLS)** ב-Supabase
+- משתני סביבה לא נחשפים בצד לקוח
+- `.env.local` נמצא ב-`.gitignore`
+- ה-`anon key` בטוח לשימוש ציבורי
+
+---
+
+## 🐛 פתרון בעיות
+
+### האתר לא עולה?
+```bash
+rm -rf .next
+npm run dev
+```
+
+### החתימות לא נשמרות?
+- בדקו את קובץ `.env.local`
+- וודאו שהרצתם את ה-SQL ב-Supabase
+- בדקו את ה-Row Level Security Policies
+
+### הפונט העברי לא עובד?
+- המתינו שהפונט יורד מ-Google Fonts
+- נקו cache (`Ctrl+Shift+R`)
+
+---
+
+## 📞 תמיכה
+
+אם נתקעתם:
+1. קראו את [SUPABASE_SETUP.md](./SUPABASE_SETUP.md)
+2. בדקו את הלוגים: `npm run dev` וחפשו שגיאות
+3. בדקו את Console ב-DevTools (F12)
+
+---
+
+## 📝 רישיון
+
+פרויקט זה נבנה למטרה צדדית ולא למטרות רווח.
+
+---
+
+## 🙏 תודות
+
+- **Next.js Team** - על Framework מדהים
+- **Supabase** - על BaaS חינמי ואיכותי
+- **Tailwind CSS** - על עיצוב מהיר
+- **עמותת בועות** - על העבודה החשובה שהם עושים
+
+---
+
+**בנוי עם ❤️ למען הילדים**
