@@ -67,38 +67,92 @@ export default function CountdownTimer() {
   }, []);
 
   return (
-    <div className={`bg-red-600 text-white sticky top-0 z-50 shadow-lg transition-all duration-300 ${isScrolled ? 'py-2 px-4' : 'py-4 px-6'}`}>
-      <div className="max-w-7xl mx-auto flex items-center justify-center gap-3 md:gap-4 flex-wrap">
-        {/* ABT Logo - smaller when scrolled */}
+    <div className={`bg-red-600 text-white sticky top-0 z-50 shadow-lg transition-all duration-300 ${
+      isScrolled
+        ? 'py-1 px-2 md:py-2 md:px-4'
+        : 'py-3 px-4 md:py-4 md:px-6'
+    }`}>
+      <div className="max-w-7xl mx-auto flex items-center justify-center gap-2 md:gap-4 flex-wrap">
+        {/* ABT Logo - hidden on mobile when scrolled, smaller on desktop */}
         {!isScrolled && (
           <div className="hidden md:block">
             <Image src="/bti_logo_text.svg" alt="איגוד הבריכות הטיפוליות" width={100} height={40} className="brightness-0 invert" />
           </div>
         )}
 
-        <div className="flex items-center gap-2">
-          <Clock className={`animate-pulse transition-all duration-300 ${isScrolled ? 'w-4 h-4' : 'w-6 h-6'}`} />
-          <span className={`font-bold transition-all duration-300 ${isScrolled ? 'text-base' : 'text-lg'}`}>הזמן אוזל!</span>
+        <div className={`flex items-center transition-all duration-300 ${
+          isScrolled ? 'gap-1' : 'gap-2'
+        }`}>
+          <Clock className={`animate-pulse transition-all duration-300 ${
+            isScrolled
+              ? 'w-3 h-3 md:w-4 md:h-4'
+              : 'w-5 h-5 md:w-6 md:h-6'
+          }`} />
+          <span className={`font-bold transition-all duration-300 ${
+            isScrolled
+              ? 'text-xs md:text-base'
+              : 'text-base md:text-lg'
+          }`}>הזמן אוזל!</span>
         </div>
 
-        <div className="flex gap-2">
-          <div className={`bg-white/20 backdrop-blur rounded-lg text-center transition-all duration-300 ${isScrolled ? 'px-2 py-1 min-w-[50px]' : 'px-4 py-2 min-w-[70px]'}`}>
-            <div className={`font-black transition-all duration-300 ${isScrolled ? 'text-xl' : 'text-3xl'}`}>{String(timeLeft.hours).padStart(2, '0')}</div>
-            <div className="text-xs font-semibold">שעות</div>
+        <div className={`flex transition-all duration-300 ${
+          isScrolled ? 'gap-1' : 'gap-2'
+        }`}>
+          <div className={`bg-white/20 backdrop-blur rounded text-center transition-all duration-300 ${
+            isScrolled
+              ? 'px-1 py-0.5 min-w-[35px] md:px-2 md:py-1 md:min-w-[50px]'
+              : 'px-2 py-1 min-w-[45px] md:px-4 md:py-2 md:min-w-[70px]'
+          }`}>
+            <div className={`font-black transition-all duration-300 ${
+              isScrolled
+                ? 'text-sm md:text-xl'
+                : 'text-xl md:text-3xl'
+            }`}>{String(timeLeft.hours).padStart(2, '0')}</div>
+            {!isScrolled && <div className="text-xs font-semibold">שעות</div>}
           </div>
-          <div className={`font-black self-center transition-all duration-300 ${isScrolled ? 'text-xl' : 'text-3xl'}`}>:</div>
-          <div className={`bg-white/20 backdrop-blur rounded-lg text-center transition-all duration-300 ${isScrolled ? 'px-2 py-1 min-w-[50px]' : 'px-4 py-2 min-w-[70px]'}`}>
-            <div className={`font-black transition-all duration-300 ${isScrolled ? 'text-xl' : 'text-3xl'}`}>{String(timeLeft.minutes).padStart(2, '0')}</div>
-            <div className="text-xs font-semibold">דקות</div>
+          <div className={`font-black self-center transition-all duration-300 ${
+            isScrolled
+              ? 'text-sm md:text-xl'
+              : 'text-xl md:text-3xl'
+          }`}>:</div>
+          <div className={`bg-white/20 backdrop-blur rounded text-center transition-all duration-300 ${
+            isScrolled
+              ? 'px-1 py-0.5 min-w-[35px] md:px-2 md:py-1 md:min-w-[50px]'
+              : 'px-2 py-1 min-w-[45px] md:px-4 md:py-2 md:min-w-[70px]'
+          }`}>
+            <div className={`font-black transition-all duration-300 ${
+              isScrolled
+                ? 'text-sm md:text-xl'
+                : 'text-xl md:text-3xl'
+            }`}>{String(timeLeft.minutes).padStart(2, '0')}</div>
+            {!isScrolled && <div className="text-xs font-semibold">דקות</div>}
           </div>
-          <div className={`font-black self-center transition-all duration-300 ${isScrolled ? 'text-xl' : 'text-3xl'}`}>:</div>
-          <div className={`bg-white/20 backdrop-blur rounded-lg text-center transition-all duration-300 ${isScrolled ? 'px-2 py-1 min-w-[50px]' : 'px-4 py-2 min-w-[70px]'}`}>
-            <div className={`font-black transition-all duration-300 ${isScrolled ? 'text-xl' : 'text-3xl'}`}>{String(timeLeft.seconds).padStart(2, '0')}</div>
-            <div className="text-xs font-semibold">שניות</div>
+          <div className={`font-black self-center transition-all duration-300 ${
+            isScrolled
+              ? 'text-sm md:text-xl'
+              : 'text-xl md:text-3xl'
+          }`}>:</div>
+          <div className={`bg-white/20 backdrop-blur rounded text-center transition-all duration-300 ${
+            isScrolled
+              ? 'px-1 py-0.5 min-w-[35px] md:px-2 md:py-1 md:min-w-[50px]'
+              : 'px-2 py-1 min-w-[45px] md:px-4 md:py-2 md:min-w-[70px]'
+          }`}>
+            <div className={`font-black transition-all duration-300 ${
+              isScrolled
+                ? 'text-sm md:text-xl'
+                : 'text-xl md:text-3xl'
+            }`}>{String(timeLeft.seconds).padStart(2, '0')}</div>
+            {!isScrolled && <div className="text-xs font-semibold">שניות</div>}
           </div>
         </div>
 
-        {!isScrolled && <span className="font-bold text-lg">עד יום שלישי 9:00 בבוקר</span>}
+        {!isScrolled && (
+          <span className={`font-bold transition-all duration-300 ${
+            isScrolled
+              ? 'text-xs md:text-base'
+              : 'text-sm md:text-lg'
+          }`}>עד יום שלישי 9:00 בבוקר</span>
+        )}
       </div>
     </div>
   );

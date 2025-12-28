@@ -5,9 +5,16 @@ import { AlertTriangle } from 'lucide-react';
 export default function HeroSection() {
   return (
     <div className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
+      {/* Background Image - Different for mobile and desktop */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden"
+        style={{ backgroundImage: 'url(https://res.cloudinary.com/dpiw23uql/image/upload/v1766947417/homepage/heroes/ewtor1nzgx7bggeufz4l.jpg)' }}
+      >
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
+      </div>
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden md:block"
         style={{ backgroundImage: 'url(https://res.cloudinary.com/dpiw23uql/image/upload/v1766945378/amazon-dropship/categories/g3pgqtjztzjoox8cj63x.jpg)' }}
       >
         {/* Dark overlay for text readability */}

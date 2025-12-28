@@ -31,12 +31,12 @@ export default function Home() {
       <HeroSection />
 
       {/* Progress Bar Section */}
-      <div className="py-12 px-4 bg-white">
+      <div className="py-6 md:py-12 px-4 bg-white">
         <ProgressBar />
       </div>
 
       <ContentSection />
-      <div className="py-16 px-4 bg-white">
+      <div className="py-8 md:py-16 px-4 bg-white">
         <SignatureForm />
       </div>
 
