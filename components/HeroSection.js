@@ -1,25 +1,21 @@
 'use client';
 
 import { AlertTriangle } from 'lucide-react';
-import Image from 'next/image';
 
 export default function HeroSection() {
   return (
-    <div className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-sky-900 via-sky-700 to-sky-500">
-      {/* Animated water waves background */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute inset-0 bg-[url('/water-pattern.svg')] animate-wave"></div>
+    <div className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url(https://res.cloudinary.com/dpiw23uql/image/upload/v1766945378/amazon-dropship/categories/g3pgqtjztzjoox8cj63x.jpg)' }}
+      >
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
       </div>
 
       {/* Content overlay */}
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-        {/* ABT Logo at top */}
-        <div className="mb-6 flex justify-center">
-          <div className="bg-white/20 backdrop-blur-md rounded-2xl p-6 inline-block">
-            <Image src="/bti_logo_text.svg" alt="איגוד הבריכות הטיפוליות" width={300} height={120} className="w-64 md:w-80" />
-          </div>
-        </div>
-
         {/* Urgent banner */}
         <div className="inline-flex items-center gap-2 bg-red-600 text-white px-6 py-3 rounded-full mb-6 animate-pulse shadow-lg">
           <AlertTriangle className="w-6 h-6" />
@@ -49,42 +45,16 @@ export default function HeroSection() {
           </p>
         </div>
 
-        {/* CTA scroll hint */}
+        {/* CTA button */}
         <div className="mt-12">
-          <p className="text-white text-xl font-bold mb-4">חתמו עכשיו לפני שיהיה מאוחר מדי</p>
-          <div className="animate-bounce">
-            <svg
-              className="w-8 h-8 mx-auto text-white"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-            </svg>
-          </div>
+          <a
+            href="#sign-form"
+            className="inline-block bg-red-600 hover:bg-red-700 text-white font-black text-2xl md:text-3xl py-5 px-12 rounded-full transition-all transform hover:scale-105 shadow-2xl animate-pulse"
+          >
+            חתמו עכשיו לפני שיהיה מאוחר מדי ↓
+          </a>
         </div>
       </div>
-
-      {/* Inline styles for wave animation */}
-      <style jsx>{`
-        @keyframes wave {
-          0% {
-            transform: translateX(0) translateY(0);
-          }
-          50% {
-            transform: translateX(-25%) translateY(5%);
-          }
-          100% {
-            transform: translateX(0) translateY(0);
-          }
-        }
-        .animate-wave {
-          animation: wave 20s ease-in-out infinite;
-        }
-      `}</style>
     </div>
   );
 }

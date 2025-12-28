@@ -3,6 +3,7 @@ import CountdownTimer from '@/components/CountdownTimer';
 import ContentSection from '@/components/ContentSection';
 import SignatureForm from '@/components/SignatureForm';
 import Footer from '@/components/Footer';
+import ProgressBar from '@/components/ProgressBar';
 
 export const metadata = {
   title: 'מצילים את הבריכות הטיפוליות - עצומה נגד ביטול טיפולי הידרותרפיה',
@@ -28,6 +29,12 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50" dir="rtl">
       <CountdownTimer />
       <HeroSection />
+
+      {/* Progress Bar Section */}
+      <div className="py-12 px-4 bg-white">
+        <ProgressBar />
+      </div>
+
       <ContentSection />
       <div className="py-16 px-4 bg-white">
         <SignatureForm />

@@ -9,6 +9,7 @@ export default function SignatureForm() {
   const [showSuccess, setShowSuccess] = useState(false);
   const [error, setError] = useState('');
   const [signatureCount, setSignatureCount] = useState(0);
+  const INITIAL_COUNT = 782;
 
   useEffect(() => {
     // Fetch initial count
@@ -82,7 +83,7 @@ export default function SignatureForm() {
       <div className="bg-gradient-to-r from-sky-500 to-sky-700 text-white rounded-xl p-6 mb-8 text-center">
         <div className="flex items-center justify-center gap-3 mb-2">
           <Users className="w-8 h-8" />
-          <span className="text-5xl font-black">{signatureCount.toLocaleString('he-IL')}</span>
+          <span className="text-5xl font-black">{(INITIAL_COUNT + signatureCount).toLocaleString('he-IL')}</span>
         </div>
         <p className="text-xl font-semibold">אנשים כבר הצטרפו למאבק!</p>
       </div>
