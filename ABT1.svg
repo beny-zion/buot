@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
+  <defs>
+    <style>
+      .text-style {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 900;
+        text-anchor: middle;
+        fill: #008YC9; /* Matches the text blue */
+      }
+    </style>
+  </defs>
+
+  <g transform="translate(200, 180) scale(0.9)">
+
+    <circle cx="0" cy="-140" r="35" fill="#009ADB" />
+
+    <path d="M-20,-80 C-60,-130 -120,-110 -150,-80 C-110,-70 -80,-30 -30,-20 Z" fill="#39B54A" />
+    <path d="M20,-80 C60,-130 120,-110 150,-80 C110,-70 80,-30 30,-20 Z" fill="#39B54A" />
+
+    <path d="M-160,-50 C-120,-90 -50,-20 0,-20 C50,-20 120,-90 160,-50 C140,-20 80,40 0,40 C-80,40 -140,-20 -160,-50 Z" fill="#4DC9E6" />
+
+    <path d="M-155,-10 C-120,-40 -50,30 0,30 C50,30 120,-40 155,-10 C140,40 80,90 0,90 C-80,90 -140,40 -155,-10 Z" fill="#29ABE2" />
+
+    <path d="M-140,40 C-100,10 -50,70 0,70 C50,70 100,10 140,40 C110,100 60,130 0,130 C-60,130 -110,100 -140,40 Z" fill="#6FD0EE" />
+  </g>
+
+  <text x="200" y="340" class="text-style" font-size="32" fill="#008FD5">איגוד</text>
+  <text x="200" y="390" class="text-style" font-size="32" fill="#008FD5">הבריכות הטיפוליות</text>
+  <text x="200" y="440" class="text-style" font-size="32" fill="#008FD5">בישראל</text>
+
+</svg>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Clock } from 'lucide-react';
+import Image from 'next/image';
 
 export default function CountdownTimer() {
   const [timeLeft, setTimeLeft] = useState({
@@ -20,7 +21,7 @@ export default function CountdownTimer() {
       const currentDay = now.getDay(); // 0 = Sunday, 1 = Monday, 2 = Tuesday
 
       // Calculate days until Tuesday (2)
-      let daysUntilTuesday;
+      let daysUntilTuesday = 0;
       if (currentDay === 0) { // Sunday
         daysUntilTuesday = 2;
       } else if (currentDay === 1) { // Monday
@@ -34,7 +35,7 @@ export default function CountdownTimer() {
           daysUntilTuesday = 7;
         }
       } else { // Wednesday to Saturday
-        daysUntilTuesday = (9 - currentDay) % 7;
+        daysUntilTuesday = (2 + 7 - currentDay) % 7;
       }
 
       targetDate.setDate(now.getDate() + daysUntilTuesday);
@@ -58,6 +59,11 @@ export default function CountdownTimer() {
   return (
     <div className="bg-red-600 text-white py-4 px-6 sticky top-0 z-50 shadow-lg">
       <div className="max-w-7xl mx-auto flex items-center justify-center gap-4 flex-wrap">
+        {/* ABT Logo */}
+        <div className="hidden md:block">
+          <Image src="/bti_logo_text.svg" alt="איגוד הבריכות הטיפוליות" width={120} height={50} className="brightness-0 invert" />
+        </div>
+
         <div className="flex items-center gap-2">
           <Clock className="w-6 h-6 animate-pulse" />
           <span className="font-bold text-lg">הזמן אוזל!</span>

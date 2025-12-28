@@ -1,6 +1,7 @@
 'use client';
 
 import { AlertTriangle } from 'lucide-react';
+import Image from 'next/image';
 
 export default function HeroSection() {
   return (
@@ -12,6 +13,13 @@ export default function HeroSection() {
 
       {/* Content overlay */}
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
+        {/* ABT Logo at top */}
+        <div className="mb-6 flex justify-center">
+          <div className="bg-white/20 backdrop-blur-md rounded-2xl p-6 inline-block">
+            <Image src="/bti_logo_text.svg" alt="איגוד הבריכות הטיפוליות" width={300} height={120} className="w-64 md:w-80" />
+          </div>
+        </div>
+
         {/* Urgent banner */}
         <div className="inline-flex items-center gap-2 bg-red-600 text-white px-6 py-3 rounded-full mb-6 animate-pulse shadow-lg">
           <AlertTriangle className="w-6 h-6" />

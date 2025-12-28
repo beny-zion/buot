@@ -1,0 +1,19 @@
+<svg width="1200" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="wave-pattern" x="0" y="0" width="200" height="100" patternUnits="userSpaceOnUse">
+      <path d="M0,50 Q25,30 50,50 T100,50 T150,50 T200,50"
+            fill="none"
+            stroke="rgba(255,255,255,0.1)"
+            stroke-width="2"/>
+      <path d="M0,60 Q25,40 50,60 T100,60 T150,60 T200,60"
+            fill="none"
+            stroke="rgba(255,255,255,0.08)"
+            stroke-width="1.5"/>
+      <path d="M0,40 Q25,20 50,40 T100,40 T150,40 T200,40"
+            fill="none"
+            stroke="rgba(255,255,255,0.06)"
+            stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="600" fill="url(#wave-pattern)"/>
+</svg>

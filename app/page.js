@@ -2,6 +2,7 @@ import HeroSection from '@/components/HeroSection';
 import CountdownTimer from '@/components/CountdownTimer';
 import ContentSection from '@/components/ContentSection';
 import SignatureForm from '@/components/SignatureForm';
+import Footer from '@/components/Footer';
 
 export const metadata = {
   title: 'מצילים את הבריכות הטיפוליות - עצומה נגד ביטול טיפולי הידרותרפיה',
@@ -32,19 +33,7 @@ export default function Home() {
         <SignatureForm />
       </div>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h3 className="text-2xl font-black mb-4">איגוד הבריכות הטיפוליות</h3>
-          <p className="text-gray-300 mb-6">
-            איגוד המספק טיפולי הידרותרפיה בבריכות טיפוליות לילדים עם צרכים מיוחדים
-          </p>
-          <p className="text-gray-400 text-sm">
-            האתר נבנה במטרה לעצור את ביטול הזכאות לטיפולי הידרותרפיה
-            מהביטוחים המשלימים
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
