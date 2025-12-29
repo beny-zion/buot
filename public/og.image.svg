@@ -1,0 +1,42 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- רקע: שילוב של כחול (מים) ואדום (חירום/אזהרה) -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- רקע כחול עמוק -->
+  <rect width="1200" height="630" fill="url(#bgGradient)" />
+  
+  <!-- צד ימין: פס אדום של "חירום" -->
+  <rect x="0" y="0" width="1200" height="40" fill="#dc2626" />
+  <rect x="0" y="590" width="1200" height="40" fill="#dc2626" />
+  
+  <!-- אלמנט גרפי: גל מים (סמלי) -->
+  <path d="M0,320 Q300,420 600,320 T1200,320 V630 H0 Z" fill="#3b82f6" opacity="0.2" />
+  <path d="M0,350 Q300,450 600,350 T1200,350 V630 H0 Z" fill="#60a5fa" opacity="0.2" />
+
+  <!-- טקסטים -->
+  <!-- כותרת עליונה בתוך הפס האדום -->
+  <text x="600" y="30" font-family="Arial, sans-serif" font-size="24" fill="white" font-weight="bold" text-anchor="middle">🚨 חירום! הגזירה נכנסת לתוקף ביום שלישי</text>
+
+  <!-- כותרת ראשית ענקית -->
+  <text x="1100" y="180" font-family="Arial, sans-serif" font-size="90" fill="white" font-weight="bold" text-anchor="end" direction="rtl">הזמן אוזל!</text>
+  
+  <!-- סלוגן מרכזי -->
+  <text x="1100" y="280" font-family="Arial, sans-serif" font-size="55" fill="#fbbf24" font-weight="bold" text-anchor="end" direction="rtl">"המים הם החמצן שלהם"</text>
+  
+  <!-- טקסט הסבר -->
+  <text x="1100" y="360" font-family="Arial, sans-serif" font-size="36" fill="#e2e8f0" text-anchor="end" direction="rtl">אלפי ילדים בפריפריה יאבדו את הטיפול היחיד שעובד.</text>
+  <text x="1100" y="410" font-family="Arial, sans-serif" font-size="36" fill="#e2e8f0" text-anchor="end" direction="rtl">אל תתנו להם לייבש את זה.</text>
+
+  <!-- כפתור דמה (Call to Action) -->
+  <rect x="100" y="480" width="400" height="80" rx="15" fill="#dc2626" />
+  <text x="300" y="535" font-family="Arial, sans-serif" font-size="40" fill="white" font-weight="bold" text-anchor="middle">חתמו עכשיו >></text>
+
+  <!-- אייקון אזהרה (משולש) -->
+  <path d="M150,150 L250,320 L50,320 Z" fill="#fbbf24" stroke="black" stroke-width="10" transform="translate(100,50)" />
+  <text x="250" y="310" font-family="Arial, sans-serif" font-size="100" fill="black" font-weight="bold" text-anchor="middle">!</text>
+</svg>
