@@ -18,7 +18,14 @@ export const metadata = {
   openGraph: {
     title: 'דחוף! עצומה נגד ביטול טיפולי הידרותרפיה',
     description: 'אל תתנו להם לייבש את זה! המים הם החמצן שלהם. חתמו עכשיו על העצומה.',
-    images: ['/og-image.svg'],
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'עצומה נגד ביטול טיפולי הידרותרפיה',
+      },
+    ],
     locale: 'he_IL',
     type: 'website',
   },
@@ -26,7 +33,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'דחוף! עצומה נגד ביטול טיפולי הידרותרפיה',
     description: 'המים הם החמצן שלהם. חתמו עכשיו!',
-    images: ['/og-image.svg'],
+    images: ['/og-image.png'],
   },
 };
 
