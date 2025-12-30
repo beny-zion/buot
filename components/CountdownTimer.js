@@ -13,33 +13,37 @@ export default function CountdownTimer() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    // Countdown to Tuesday 9:00 AM
+    // Countdown to Thursday 9:00 AM
     const updateTimer = () => {
       const now = new Date();
 
-      // Set target date to next Tuesday at 9:00 AM
+      // Set target date to next Thursday at 9:00 AM
       const targetDate = new Date();
-      const currentDay = now.getDay(); // 0 = Sunday, 1 = Monday, 2 = Tuesday
+      const currentDay = now.getDay(); // 0 = Sunday, 1 = Monday, 2 = Tuesday, 3 = Wednesday, 4 = Thursday
 
-      // Calculate days until Tuesday (2)
-      let daysUntilTuesday = 0;
+      // Calculate days until Thursday (4)
+      let daysUntilThursday = 0;
       if (currentDay === 0) { // Sunday
-        daysUntilTuesday = 2;
+        daysUntilThursday = 4;
       } else if (currentDay === 1) { // Monday
-        daysUntilTuesday = 1;
+        daysUntilThursday = 3;
       } else if (currentDay === 2) { // Tuesday
-        // If it's Tuesday but before 9 AM, target is today
-        // If it's after 9 AM, target is next Tuesday
+        daysUntilThursday = 2;
+      } else if (currentDay === 3) { // Wednesday
+        daysUntilThursday = 1;
+      } else if (currentDay === 4) { // Thursday
+        // If it's Thursday but before 9 AM, target is today
+        // If it's after 9 AM, target is next Thursday
         if (now.getHours() < 9 || (now.getHours() === 9 && now.getMinutes() === 0 && now.getSeconds() === 0)) {
-          daysUntilTuesday = 0;
+          daysUntilThursday = 0;
         } else {
-          daysUntilTuesday = 7;
+          daysUntilThursday = 7;
         }
-      } else { // Wednesday to Saturday
-        daysUntilTuesday = (2 + 7 - currentDay) % 7;
+      } else { // Friday to Saturday
+        daysUntilThursday = (4 + 7 - currentDay) % 7;
       }
 
-      targetDate.setDate(now.getDate() + daysUntilTuesday);
+      targetDate.setDate(now.getDate() + daysUntilThursday);
       targetDate.setHours(9, 0, 0, 0);
 
       const diff = targetDate - now;
@@ -151,7 +155,7 @@ export default function CountdownTimer() {
             isScrolled
               ? 'text-xs md:text-base'
               : 'text-sm md:text-lg'
-          }`}>עד יום שלישי 9:00 בבוקר</span>
+          }`}>עד יום חמישי 9:00 בבוקר</span>
         )}
       </div>
     </div>
