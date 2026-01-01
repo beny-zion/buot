@@ -7,7 +7,7 @@ import { getSignatureCount } from '@/lib/actions';
 export default function ProgressBar() {
   const [signatureCount, setSignatureCount] = useState(0);
   const [copied, setCopied] = useState(false);
-  const INITIAL_COUNT = 782;
+  const INITIAL_COUNT = 0;
   const GOAL = 10000;
   const SHARE_URL = 'https://ibt-seven.vercel.app';
 
