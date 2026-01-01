@@ -9,7 +9,7 @@ export default function SignatureForm() {
   const [showSuccess, setShowSuccess] = useState(false);
   const [error, setError] = useState('');
   const [signatureCount, setSignatureCount] = useState(0);
-  const INITIAL_COUNT = 782;
+  const INITIAL_COUNT = 0;
 
   useEffect(() => {
     // Fetch initial count
